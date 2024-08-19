@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+    <div class="container2">
+      <h1>Formulir Lamaran Kerja</h1>
+      <p>Lengkapi data di bawah ini dengan benar.</p>
+      <form class="flex flex-col" action="/biodata" method="post">
+        <label>Name</label>
+        <input
+          class="text-field"
+          type="text"
+          name="name"
+          placeholder="Your name"
+        />
+
+        <label>Tempat dan Tanggal Lahir</label>
+        <input class="text-field" type="date" name="date" />
+
+        <label>Umur</label>
+        <input class="text-field" type="text" name="umur" placeholder="Umur" />
+
+        <label for="jenis_kelamin">Jenis Kelamin</label>
+        <select class="text-field" name="jenis_kelamin" id="jenis_kelamin">
+          <option value="L">Laki-Laki</option>
+          <option value="P">Perempuan</option>
+        </select>
+
+        <label>NIK</label>
+        <input class="text-field" type="text" name="nik" placeholder="NIK" />
+
+        <label for="pendidikan">Pendidikan</label>
+        <select class="text-field" name="pendidikan" id="pendidikan">
+          <option value="sma">SMA</option>
+          <option value="s1">S1</option>
+          <option value="s2">S2</option>
+          <option value="s3">S3</option>
+        </select>
+
+        <label for="posisi">Posisi</label>
+        <select class="text-field" name="posisi" id="posisi">
+          <option value="Data Analys">Data Analys</option>
+          <option value="Programmer">Programmer</option>
+        </select>
+
+        <label class="mt-10px" for="alasan_posisi">Alasan Memilih Posisi</label>
+        <textarea
+          name="alasan_posisi"
+          id="alasan_posisi"
+          class="text-field"
+          cols="20"
+          rows="7"
+        ></textarea>
+
+        <div class="flex flex-row justify-between">
+          <a class="button" href="{{url_for('index')}}">Back</a>
+          <button class="button" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
